@@ -1,6 +1,6 @@
 cask "kotlin-native" do
-  version "1.4.32"
-  sha256 "a55eb3c60bb9810360c5a992dca34328d806fe13f3bfc3120b49345f569fd3cc"
+  version "1.5.21"
+  sha256 "adced4f332b2d3f91d14bf3cf5c1059cfbbac4dc75d91ae88645118badbc401a"
 
   url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{version}.tar.gz",
       verified: "github.com/JetBrains/kotlin/"
@@ -10,8 +10,7 @@ cask "kotlin-native" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^v(\d+(?:\.\d+)*)$/)
+    regex(/^v?(\d+(?:\.\d+)+)$/)
   end
 
   conflicts_with formula: "kotlin"

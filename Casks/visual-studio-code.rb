@@ -1,11 +1,11 @@
 cask "visual-studio-code" do
-  version "1.55.0"
+  version "1.58.2"
 
   if Hardware::CPU.intel?
-    sha256 "f0f3e8749b5fc42951b1875cefc4bfab82f8379c0e759b940ffccfc10de1ff09"
+    sha256 "a69fa37ffb49f14111872bd63919c9b72e4b7651d34d9acf358a3c15120acb3c"
     url "https://update.code.visualstudio.com/#{version}/darwin/stable"
   else
-    sha256 "0f25a9abf91a5a0c7a4cff092b949bfc650f98035dcdb3ed276c91baf534f93b"
+    sha256 "c0c3a7d670deafdfe2cfa713c5a00bc53cd68343b9b7a676e82e82e3fb940ff2"
     url "https://update.code.visualstudio.com/#{version}/darwin-arm64/stable"
   end
 

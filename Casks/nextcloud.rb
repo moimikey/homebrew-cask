@@ -6,8 +6,8 @@ cask "nextcloud" do
     url "https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
   else
-    version "3.1.3"
-    sha256 "88bd85fbc51cf81032b096f68d1b1f2700fe30e324a3d8048da8ece4647a76e7"
+    version "3.2.4"
+    sha256 "124d09e3064be3bb1656f714f93e27f87a03297a219601bd97e3b68d3c9561b5"
 
     url "https://github.com/nextcloud/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"

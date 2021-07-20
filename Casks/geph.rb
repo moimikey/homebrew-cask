@@ -1,6 +1,6 @@
 cask "geph" do
-  version "4.3.2"
-  sha256 "c1cdcd0c367e468a30ad3b68ca7fa8d53f77c098486c66a1000cd51eb38d48ef"
+  version "4.4.5"
+  sha256 "ff8085bfb60fbc53e4344074d620f56705af0e5722ff7a4cd5770fed661c1883"
 
   url "https://f001.backblazeb2.com/file/geph4-dl/Geph4Releases/#{version}/geph-macos-#{version}.dmg",
       verified: "f001.backblazeb2.com/file/geph4-dl/"
@@ -9,8 +9,13 @@ cask "geph" do
   homepage "https://geph.io/"
 
   livecheck do
-    skip
+    url "https://github.com/geph-official/geph4"
   end
 
   app "Geph.app"
+
+  zap trash: [
+    "~/Library/Application Support/gephgui#{version.major}",
+    "~/Library/Preferences/io.geph.geph-electron.plist",
+  ]
 end

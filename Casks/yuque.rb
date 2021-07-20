@@ -1,6 +1,6 @@
 cask "yuque" do
-  version "0.7.14"
-  sha256 "badc59f2b537b2f611d104f74839f7d1dcec511cdf5e5fd9000675ed544dd093"
+  version "0.9.10"
+  sha256 "ebb1e92c83966fe66eb16df00c99f1b595222b0cfb12792db410d3dc36e67e31"
 
   url "https://app.nlark.com/yuque-desktop/Yuque-#{version}.dmg",
       verified: "app.nlark.com/yuque-desktop/"
@@ -10,8 +10,7 @@ cask "yuque" do
   homepage "https://www.yuque.com/"
 
   livecheck do
-    url "https://www.yuque.com/yuque/help/changelog"
-    strategy :page_match
+    url "https://www.yuque.com/yuque/yuque-desktop/changelog"
     regex(/下载地址(\d+(?:\.\d+)*)/i)
   end
 

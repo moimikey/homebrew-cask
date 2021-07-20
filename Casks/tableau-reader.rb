@@ -1,9 +1,10 @@
 cask "tableau-reader" do
-  version "2021.1.0"
-  sha256 "ab62a7ecbd45a04e083ad1c9d0f96517d789180257c5efac30e0052ae88214f7"
+  version "2021.2.0"
+  sha256 "09bbef8e49e931b47f6fd87e965c55b5f9435c3610fed1dc680ec59d87f84c0e"
 
   url "https://downloads.tableau.com/tssoftware/TableauReader-#{version.dots_to_hyphens}.dmg"
   name "Tableau Reader"
+  desc "Open and interact with data visualizations built in Tableau Desktop"
   homepage "https://www.tableau.com/products/reader"
 
   livecheck do

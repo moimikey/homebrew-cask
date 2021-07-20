@@ -1,10 +1,11 @@
 cask "ledger-live" do
-  version "2.24.0"
-  sha256 "11d1503d661d10792e71943753e606b545bcf3d856bb61c2155340cdc271f852"
+  version "2.30.0"
+  sha256 "637c2eee8d96f2c82140a85008440b7692fc9e78700db63b94774ec6852792ee"
 
   url "https://github.com/LedgerHQ/ledger-live-desktop/releases/download/v#{version}/ledger-live-desktop-#{version}-mac.dmg",
       verified: "github.com/LedgerHQ/ledger-live-desktop/"
   name "Ledger Live"
+  desc "Wallet desktop application to maintain multiple cryptocurrencies"
   homepage "https://www.ledgerwallet.com/live"
 
   livecheck do

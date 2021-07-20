@@ -1,6 +1,6 @@
 cask "brook" do
-  version "20210401"
-  sha256 "15d851b72d81ebe06f8c74ed8abcb8cbb6f64d6026604612eff5c2bbf03e37aa"
+  version "20210701"
+  sha256 "6c7f203eb546bea467f99a66b555fd8181749b4b572c137cd4272030cf19e34b"
 
   url "https://github.com/txthinking/brook/releases/download/v#{version}/Brook.dmg"
   name "Brook"

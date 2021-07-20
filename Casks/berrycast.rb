@@ -1,13 +1,20 @@
 cask "berrycast" do
-  version "0.32.5"
-  sha256 "3ed463dba823790667f31931b354dca6bf15120e2f9641b2ab4285619570c8b8"
+  version "0.34.7"
+  sha256 "de7e2c5c83d19d5099980944413f548865eebcfe97bacdda61d43804170a8ed1"
 
   url "https://media.berrycast.app/desktop-installer/Berrycast-#{version}-latest.dmg",
       verified: "media.berrycast.app/"
-  appcast "https://media.berrycast.app/desktop-installer/v2/latest-mac.yml"
   name "Berrycast"
   desc "Screen recorder"
   homepage "https://www.berrycast.com/"
+
+  livecheck do
+    url "https://media.berrycast.app/desktop-installer/v2/latest-mac.yml"
+    strategy :page_match
+    regex(/Berrycast[._-]?v?(\d+(?:\.\d+)+)[._-]latest\.dmg/i)
+  end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Berrycast.app"
 

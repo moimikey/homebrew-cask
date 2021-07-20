@@ -1,13 +1,19 @@
 cask "fantastical" do
-  version "3.3.7"
-  sha256 "d139d12f9ee16174f4da44e7cee61bf1a798962d8d348ba8b16e9896a8c706b9"
+  version "3.4.2,1318"
+  sha256 "72ff10924c980c9ee6581f473ad9907e2c56da9687bbb36d9301af8762d85b78"
 
-  url "https://cdn.flexibits.com/Fantastical_#{version}.zip"
-  appcast "https://flexibits.com/fantastical/appcast2.php"
+  url "https://cdn.flexibits.com/Fantastical_#{version.before_comma}.zip"
   name "Fantastical"
+  desc "Calendar software"
   homepage "https://flexibits.com/fantastical"
 
+  livecheck do
+    url "https://flexibits.com/fantastical/appcast2.php"
+    strategy :sparkle
+  end
+
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Fantastical.app"
 

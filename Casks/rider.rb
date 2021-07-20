@@ -1,14 +1,23 @@
 cask "rider" do
-  version "2020.3.4,203.7717.10"
-  sha256 "3454d0df7abfa3af8c3cf76c4529057b9c7c02e6ee57065e541f9f1d2497c28a"
+  version "2021.1.4,211.7628.50"
+  sha256 "3d7b5390a5092b15779911cbf8cbc5a2cb3b6b2f0ff74bafd339b81ae561b8f8"
 
   url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.before_comma}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=RD&latest=true&type=release"
-  name "Jetbrains Rider"
-  desc "Cross-Platform .NET IDE"
+  name "JetBrains Rider"
+  desc ".NET IDE"
   homepage "https://www.jetbrains.com/rider/"
 
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=RD&latest=true&type=release"
+    strategy :page_match do |page|
+      JSON.parse(page)["RD"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
+    end
+  end
+
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Rider.app"
 

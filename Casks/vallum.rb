@@ -1,17 +1,19 @@
 cask "vallum" do
-  version "4.0"
-  sha256 "3ddd8b6635c002463b9db2fc9bccf4e3fd9cd35b166f4080475e7ae7725b0ada"
+  version "4.0.2"
+  sha256 "98e634fab5ad22f11cb920476528570123bae2342a1a55f826c4220445531684"
 
   url "https://github.com/TheMurusTeam/Vallum/releases/download/v#{version}/vallum-#{version}.zip",
       verified: "github.com/TheMurusTeam/Vallum/"
   name "Vallum"
+  desc "Application firewall"
   homepage "https://www.vallumfirewall.com/"
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^v?(\d+(?:\.\d+)*)$/i)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
+
+  depends_on macos: ">= :catalina"
 
   app "Vallum.app"
 

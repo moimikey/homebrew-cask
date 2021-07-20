@@ -1,5 +1,5 @@
 cask "spotify" do
-  version "1.1.56.595.g2d2da0de,1.1.56.595.g2d2da0de-24"
+  version "1.1.63.568.gda8cb5ac,1.1.63.568.gda8cb5ac-26"
   sha256 :no_check
 
   url "https://download.scdn.co/Spotify.dmg",
@@ -9,7 +9,8 @@ cask "spotify" do
   homepage "https://www.spotify.com/"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :extract_plist
   end
 
   auto_updates true

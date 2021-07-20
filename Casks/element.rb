@@ -1,6 +1,6 @@
 cask "element" do
-  version "1.7.24"
-  sha256 "652fba3adbfb2520af2ada38134de242c26349f23153b94cbcce271c5b456524"
+  version "1.7.33"
+  sha256 "9534db6940903e9c5323fe6eb156b0c3190fdb1e0c8f61816ab5567c07045d44"
 
   url "https://packages.riot.im/desktop/install/macos/Element-#{version}.dmg",
       verified: "packages.riot.im/desktop/"
@@ -10,7 +10,7 @@ cask "element" do
 
   livecheck do
     url "https://github.com/vector-im/riot-desktop"
-    strategy :git
+    strategy :github_latest
   end
 
   auto_updates true
